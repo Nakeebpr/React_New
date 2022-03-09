@@ -6,7 +6,7 @@ function App() {
     <>
       <Navbar title="Nakeeb" />
       <div className="container my-13">
-        <TextForm heading="Enter the text to analyze"/>
+        <TextForm heading="Enter the text to analyze" />
       </div>
     </>
   );
