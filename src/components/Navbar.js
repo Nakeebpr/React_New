@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function Navbar(prop) {
+
+export default function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <a className="navbar-brand" href="/">
-          {prop.title}
+          {props.title}
         </a>
         <button
           className="navbar-toggler"
@@ -45,6 +46,10 @@ export default function Navbar(prop) {
             >
               Search
             </button>
+            <div className={`custom-control custom-switch mx-5 text-${props.mode==="light"?"dark":"light"}`}>
+              <input type="checkbox" className="custom-control-input" id="customSwitches"/>
+              <label className="custom-control-label" htmlFor="customSwitches" onClick={props.toggleMode}>{props.nmode}</label>
+            </div>
           </form>
         </div>
       </nav>
