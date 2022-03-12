@@ -47,9 +47,9 @@ export default function TextForm(props) {
         Click to clear
       </button>
       <div className="container">
-        <p>{`There are ${text.length} characters`}</p>
-        <p>{text.length>1?`Words : ${text.split(" ").length}`:"Enter Text"}</p>
-        <p>{text.length>2?`You will need ${text.split(" ").length * 0.025} secs to read Words`:"Enter text"}</p>
+        <p>{text.length<=1?"Enter text":`There are ${text.length-1} characters`}</p>
+        <p>{text.length>1?`Words : ${text.split(" ").length-1}`:"Enter Text"}</p>
+        <p>{text.length>2?`You will need ${text.split(" ").length * 0.025.toFixed(2)} secs to read Words`:"Enter text"}</p>
       </div>
     </div>
   );
