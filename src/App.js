@@ -17,7 +17,7 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null)
-    }, 2000);
+    }, 5000);
   }
 
   const toggleMode=()=>{
